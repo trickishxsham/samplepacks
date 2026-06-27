@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "store": "IMPROVS2 Sample Packs",
+  "updated": "2026-06-27",
+  "_format": {
+    "_comment": "Add one object per pack to the 'packs' array. 'file' is the .pack.js path inside this repo's packs/ folder. The app loads it by <script> from jsDelivr, same as the local wav.pack mechanism. id must be unique.",
+    "example": {
+      "id": "lofi-kit-1",
+      "title": "Lo-Fi Kit Vol. 1",
+      "genre": "lofi",
+      "count": 12,
+      "file": "packs/lofi_kit_1.pack.js",
+      "notes": "drums + keys one-shots"
+    }
+  },
+  "packs": []
+}
