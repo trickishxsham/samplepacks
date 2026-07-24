@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "enabled": true,
+  "interstitial": {
+    "minGapMs": 90000,
+    "sessionMax": 8,
+    "firstAdDelayMs": 120000,
+    "showProb": 0.3
+  },
+  "placements": {
+    "gradeComplete": true,
+    "featureClose": true,
+    "export": false
+  },
+  "rewarded": { "enabled": true },
+  "banner": { "enabled": true }
+}
