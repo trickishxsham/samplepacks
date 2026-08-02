@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "store": "IMPROVS2 Sample Packs",
-  "updated": "2026-06-27",
+  "updated": "2026-08-02",
   "_format": {
     "_comment": "Add one object per pack to the 'packs' array. 'file' is the .pack.js path inside this repo's packs/ folder. The app loads it by <script> from jsDelivr, same as the local wav.pack mechanism. id must be unique.",
     "example": {
@@ -13,5 +13,14 @@
       "notes": "drums + keys one-shots"
     }
   },
-  "packs": []
+  "packs": [
+    {
+      "id": "legendary.bloomfield",
+      "title": "Legendary Bloomfield",
+      "genre": "one-shots",
+      "count": 45,
+      "file": "packs/legendary.bloomfield.pack.js",
+      "notes": "45 pre-cut one-shot WAVs"
+    }
+  ]
 }
