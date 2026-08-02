@@ -27,13 +27,16 @@
   function pad3(n){ return String(n).padStart(3,'0'); }
   function cacheKey(i){ return PACK_ID+'.v'+PACK_VERSION+'.'+pad3(i); }
 
+  var _dbPromise = null;
   function openDb(){
-    return new Promise(function(resolve, reject){
+    if(_dbPromise) return _dbPromise; // reuse a single connection for the whole session
+    _dbPromise = new Promise(function(resolve, reject){
       var req = indexedDB.open(DB_NAME, 1);
       req.onupgradeneeded = function(){ req.result.createObjectStore(STORE); };
       req.onsuccess = function(){ resolve(req.result); };
-      req.onerror = function(){ reject(req.error); };
+      req.onerror = function(){ _dbPromise = null; reject(req.error); };
     });
+    return _dbPromise;
   }
   function dbGet(key){
     return openDb().then(function(db){
